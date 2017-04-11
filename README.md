@@ -11,6 +11,10 @@ $ go get github.com/JulzDiverse/openwhisk
 ## Example
 
 ```
+package main
+
+import github.com/JulzDiverse/openwhisk
+
 func main(){
   whisk := openwhisk.New(
      "api_endpoint" //"https://openwhisk.ng.bluemix.net/api/v1"
