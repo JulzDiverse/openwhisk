@@ -15,7 +15,7 @@ func main(){
   whisk := openwhisk.New(
      "api_endpoint" //"https://openwhisk.ng.bluemix.net/api/v1"
      "token-string",
-     "your_bluemix_namespace",
+     "your_bluemix_namespace", //replace '@' with '%40'
   )   
 
 
