@@ -33,9 +33,9 @@ func (ow *OpenWhisk) TriggerAction(action string, args string) error {
 		return err
 	}
 
-	addHeader(req, ow.Token)
+	addHeader(req, ow.token)
 	client := ow.client
-	err := doRequest(req, client)
+	err = doRequest(req, client)
 	if err != nil {
 		return err
 	}
@@ -46,7 +46,7 @@ func (ow *OpenWhisk) TriggerAction(action string, args string) error {
 func doRequest(req *http.Request, client http.Client) error {
 	resp, err := client.Do(req)
 	if err != nil {
-		return error
+		return err
 	}
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
